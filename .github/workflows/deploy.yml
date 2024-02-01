@@ -51,12 +51,12 @@ jobs:
         run: pnpm install
 
       - name: Generate
-        run: pnpm generate
+        run: pnpm dlx nuxt build --preset github_pages
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./output/public
 
   # Deployment job
   deploy:
