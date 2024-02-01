@@ -18,11 +18,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
 
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
       - name: Setup node env
         uses: actions/setup-node@v4
         
         with:
           node-version: ${{ matrix.node }}
+          cache: 'pnpm'
 
       - name: Install dependencies
         run: pnpm install
