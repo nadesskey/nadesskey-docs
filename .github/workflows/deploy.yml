@@ -23,6 +23,7 @@ jobs:
 
       - name: Setup node env
         uses: actions/setup-node@v4
+        
         with:
           node-version: ${{ matrix.node }}
           cache: 'pnpm'
@@ -50,9 +51,7 @@ jobs:
         run: pnpm install
 
       - name: Generate
-        run: |
-          pnpm generate
-          sleep 10
+        run: pnpm generate
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
