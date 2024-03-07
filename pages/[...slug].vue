@@ -1,5 +1,6 @@
 <template>
   <main>
+    test
     <ContentDoc>
       <template #not-found>
         <h1>404 Not Found</h1>
