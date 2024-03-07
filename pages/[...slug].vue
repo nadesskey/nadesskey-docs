@@ -2,7 +2,12 @@
   <main>
     <ContentDoc>
       <template #default="{ doc }">
-        <ContentRenderer :value="doc" />
+        <template v-if="doc">
+          <ContentRenderer :value="doc" />
+        </template>
+        <template v-else>
+          <h1>Loading...</h1>
+        </template>
       </template>
       <template #not-found>
         <h1>404 Not Found</h1>
