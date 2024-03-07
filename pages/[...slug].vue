@@ -1,6 +1,6 @@
 <template>
   <main>
-    <ContentDoc>
+    <ContentDoc :path="$route.path">
       <template #not-found>
         <h1>404 Not Found</h1>
         <p>アクセスしたページが見つかりませんでした。</p>
