@@ -21,10 +21,13 @@
       <p><a href="http://github.com/nadesskey/nadesskey">GitHubはこちら</a></p>
 
       <h3>利用規約</h3>
-      <NuxtLink to="/terms">利用規約はこちら</NuxtLink>
+      <NuxtLink :to="data?._path ?? '/terms'">利用規約はこちら</NuxtLink>
     </section>
   </div>
 </template>
+<script lang="ts" setup>
+const { data } = await useAsyncData('/', () => queryContent('terms').only(['_path']).findOne())
+</script>
 <style module>
 .body {
   width: 100%;
