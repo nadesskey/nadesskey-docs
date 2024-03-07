@@ -1,4 +1,5 @@
 <template>
+  <NuxtLayout>
   <main>
     <ContentDoc>
       <template #not-found>
@@ -11,6 +12,7 @@
       </template>
     </ContentDoc>
   </main>
+  </NuxtLayout>
 </template>
 <style>
   h2 {

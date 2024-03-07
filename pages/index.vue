@@ -1,4 +1,5 @@
 <template>
+  <NuxtLayout>
   <div :class="$style.body">
     <section>
       <h1>なですきー docs</h1>
@@ -24,6 +25,7 @@
       <NuxtLink to="/terms">利用規約はこちら</NuxtLink>
     </section>
   </div>
+</NuxtLayout>
 </template>
 <style module>
 .body {
