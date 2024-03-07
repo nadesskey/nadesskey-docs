@@ -19,14 +19,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
 
-      - run: corepack enable
-
       - name: Setup node env
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v4 
         
         with:
           node-version: ${{ matrix.node }}
           cache: 'pnpm'
+      
+      - run: corepack enable
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -50,6 +50,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Build
+        run: pnpm build
+
       - name: Generate
         run: pnpm dlx nuxt generate --preset github_pages
 
@@ -64,7 +67,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./.output/public
+          path: ./dist
 
   # Deployment job
   deploy:
