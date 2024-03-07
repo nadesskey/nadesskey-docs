@@ -50,11 +50,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build
-        run: pnpm build
-
       - name: Generate
-        run: pnpm generate --preset github_pages
+        run: pnpm dlx nuxt generate --preset github_pages
 
       - name: Save cache
         uses: actions/cache@v4
