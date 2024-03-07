@@ -54,7 +54,7 @@ jobs:
         run: pnpm build
 
       - name: Generate
-        run: pnpm dlx nuxt generate --preset github_pages
+        run: pnpm generate --preset github_pages
 
       - name: Save cache
         uses: actions/cache@v4
