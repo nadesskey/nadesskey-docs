@@ -6,7 +6,7 @@
     </NuxtLink>
   </header>
   <div :class="$style.page">
-    <slot></slot>
+    <slot />
   </div>
   <footer></footer>
 </template>
