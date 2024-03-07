@@ -23,7 +23,6 @@ jobs:
 
       - name: Setup node env
         uses: actions/setup-node@v4 
-        
         with:
           node-version: ${{ matrix.node }}
           cache: 'pnpm'
@@ -51,7 +50,9 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Generate
-        run: pnpm dlx nuxt generate --preset github_pages
+        run: pnpm dlx nuxt build
+        env:
+          NITRO_PRESET: github_pages
 
       - name: Save cache
         uses: actions/cache@v4
