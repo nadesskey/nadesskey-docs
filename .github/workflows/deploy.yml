@@ -19,14 +19,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
 
+      - run: corepack enable
+
       - name: Setup node env
         uses: actions/setup-node@v4 
         
         with:
           node-version: ${{ matrix.node }}
           cache: 'pnpm'
-      
-      - run: corepack enable
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
