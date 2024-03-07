@@ -1,6 +1,11 @@
 <template>
   <main>
-    <ContentDoc />
+    <ContentDoc>
+      <template #not-found>
+        <h1>404 Not Found</h1>
+        <p>アクセスしたページが見つかりませんでした。</p>
+      </template>
+    </ContentDoc>
   </main>
 </template>
 <style>

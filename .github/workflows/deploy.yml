@@ -51,7 +51,15 @@ jobs:
         run: pnpm install
 
       - name: Generate
-        run: pnpm dlx nuxt build --preset github_pages
+        run: pnpm dlx nuxt generate --preset github_pages
+
+      - name: Save cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            dist
+            .nuxt
+          key: ${{ runner.os }}-nuxt-build-${{ hashFiles('dist') }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
