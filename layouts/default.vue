@@ -23,7 +23,7 @@
   --border-radius: 12px;
   color: var(--text-normal);
 
-  font-family: 'BIZ UDPゴシック', 'BIZ UDPGothic', 'Yu Gothic', 'YuGothic', '游ゴシック', '游ゴシック体', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-family: 'Yu Gothic', 'YuGothic', '游ゴシック', '游ゴシック体', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
 html, body {
@@ -31,6 +31,7 @@ html, body {
   padding: 0;
 
   background-color: var(--bg);
+  line-height: 1.6;
 }
 
 header {
@@ -69,26 +70,46 @@ header a {
 
 h1 {
   font-size: 28px;
+  font-weight: 700;
   border-bottom: 1px solid rgba(var(--text-normal-rgb), 0.5);
   margin: 16px 0;
+  & > a {
+    color: var(--text-normal);
+    text-decoration: none;
+  }
 }
 
 h2 {
   font-size: 24px;
+  font-weight: 700;
   padding: 0;
   margin: 32px 0 16px 0;
+  & > a {
+    color: var(--text-normal);
+    text-decoration: none;
+  }
 }
 
 h3 {
   font-size: 18px;
+  font-weight: 700;
   margin: 26px 0 8px 0;
+  & > a {
+    color: var(--text-normal);
+    text-decoration: none;
+  }
 }
 
 h4 {
   font-size: 16px;
+  font-weight: 700;
   border-left: 4px solid var(--accent);
   padding: 0 4px;
   margin: 20px 0 12px 0;
+  & > a {
+    color: var(--text-normal);
+    text-decoration: none;
+  }
 }
 
 p {
