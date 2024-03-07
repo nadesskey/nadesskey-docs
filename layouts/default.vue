@@ -22,6 +22,8 @@
   --text-sub: #fafafa;
   --border-radius: 12px;
   color: var(--text-normal);
+
+  font-family: 'BIZ UDPゴシック', 'BIZ UDPGothic', 'Yu Gothic', 'YuGothic', '游ゴシック', '游ゴシック体', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
 html, body {
