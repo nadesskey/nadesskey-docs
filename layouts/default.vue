@@ -1,7 +1,7 @@
 <template>
   <header>
     <NuxtLink to="/" :class="$style.header_link">
-      <NuxtImg :class="$style.logo" sizes="40px" src="https://mi-gcs.taichan.site/files/b036e900-d787-4f77-bcdc-36f2fda72b19.png" alt="" />
+      <NuxtImg :class="$style.logo" width="40px" height="40px" src="/nadesskey_logo_v4.png" alt="" />
       なですきー docs
     </NuxtLink>
   </header>
