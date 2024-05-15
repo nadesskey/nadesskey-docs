@@ -51,6 +51,8 @@ header a {
 .header_link {
   display: flex;
   align-items: center;
+  font-size: 19px;
+  font-weight: 500;
 }
 
 .logo {
